@@ -1,0 +1,10 @@
+{% extends 'WikiApp/base.html' %}
+
+{% block content %}
+<!-- multipart is used to upload files to server-->
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button>Submit</button>
+</form>
+{% endblock content %}

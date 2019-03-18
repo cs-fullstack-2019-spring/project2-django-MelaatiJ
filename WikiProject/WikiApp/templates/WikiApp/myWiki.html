@@ -1,0 +1,30 @@
+{% extends 'WikiApp/base.html' %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+<div class="wikiContainer">
+    {% if myWikis %}
+    {% for eachWiki in myWikis %}
+    <a href="{{ eachWiki.get_absolute_url }}">{{ eachWiki.title }} </a><br>
+    {{ eachWiki.text }} <br>
+    {{ eachWiki.createdDate }} <br>
+    {{ eachWiki.updatedDated }}<br>
+    <img src="{{ eachWiki.image.url }}" alt="wiki image">
+    {% endfor %}
+
+</div>
+{% else %}
+<h1>No Wikis Available </h1>
+<a href="{% url 'addWiki' %}">Add Wiki</a>
+<a href="{% url 'logout' %}">LOGOUT</a>
+{% endif %}
+
+{% else %}
+<div>
+    <a href="{% url 'login' %}">LOGIN</a>
+    <a href="{% url 'newUser' %}">CREATE ACCOUNT</a>
+</div>
+
+{% endif %}
+
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends 'WikiApp/base.html' %}
+
+
+
+{% block content %}
+
+<!--throw errors-->
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+<!--login form-->
+<form class="form-group" method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <table>
+
+        <tr>
+            <td>{{ form.username.label_tag }}</td>
+            <td>{{ form.username }}</td>
+        </tr>
+
+        <tr>
+            <td>{{ form.password.label_tag }}</td>
+            <td>{{ form.password }}</td>
+        </tr>
+    </table>
+
+    <input type="submit" value="login" />
+    <input type="hidden" name="next" value="{{ next }}" />
+</form>
+
+<!--back to home link-->
+<a href="{% url 'index' %}">Go back home</a>
+
+{% endblock %}

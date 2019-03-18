@@ -1,0 +1,10 @@
+{% extends 'WikiApp/base.html' %}
+<!-- edit wiki form that reapppears -->
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{ newWiki.as_p }}
+    <input type="submit" value="submit">
+
+</form>
+{% endblock content %}
