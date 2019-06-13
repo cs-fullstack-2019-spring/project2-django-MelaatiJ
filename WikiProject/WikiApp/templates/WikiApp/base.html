@@ -38,10 +38,16 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'WikiApp:newUser' %}">Sign Up</a>
             </li>
+
             {% endif %}
         </ul>
+        <form method="post" action="{% url 'WikiApp:search' %}" class="form-inline my-2 my-lg-0">
+            {% csrf_token %}
+            <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </form>
         <span class="navbar-text">
-      Explore the World, Create the World
+      Explore the World
     </span>
     </div>
 </nav>

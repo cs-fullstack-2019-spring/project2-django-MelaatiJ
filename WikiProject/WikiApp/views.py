@@ -5,6 +5,7 @@ from .forms import NewUserForm, WikiEntryForm, RIEntryForm
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 from django.conf import settings
+from django.db.models import Q
 
 # Create your views here.
 # currentUser = get_user_model()
@@ -46,17 +47,12 @@ def newUser(request):
 
 
 def addWiki(request):
-    # get form and files using request
     form = WikiEntryForm(request.POST or None, request.FILES or None)
-    # pass infor to html
     context = {
         "form": form
     }
-    # if method equals post
     if request.method == "POST":
-        # get current user
         currentUser = User.objects.get(username=request.user)
-        # create new wiki form
         WikiEntryModel.objects.create(title=request.POST["title"], text=request.POST['text'],
                                       createdDate=request.POST['createdDate'], updatedDate=request.POST["updatedDate"],
                                       image=request.FILES['image'], creator=currentUser)
@@ -171,3 +167,12 @@ def eachWiki(request, pk):
     }
 
     return render(request, "WikiApp/eachWiki.html", context)
+
+def search(request):
+    search=request.POST['search']
+    wikiSearch = WikiEntryModel.objects.filter(Q(title__icontains=search) or Q(text__icontains=search))
+    context = {
+        "wikiSearch": wikiSearch
+    }
+    return render(request, "WikiApp/searchResults.html", context)
+

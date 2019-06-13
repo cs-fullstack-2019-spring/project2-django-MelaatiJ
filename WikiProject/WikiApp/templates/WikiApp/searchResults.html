@@ -1,0 +1,13 @@
+{% extends 'WikiApp/base.html' %}
+
+
+{% block content %}
+{% for eachSearch in wikiSearch %}
+<div>
+    <a href="{{ eachSearch.get_absolute_url }}">{{ eachSearch.title }}</a>
+
+</div>
+
+
+{% endfor %}
+{% endblock content %}

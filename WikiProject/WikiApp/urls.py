@@ -20,5 +20,7 @@ urlpatterns = [
     path("addRI/<pk>/", views.addRI, name="addRI"),
     path("editRI/<wikipk>/<ripk>/", views.editRI, name="editRI"),
     path("deleteRI/<wikipk>/<ripk>/", views.deleteRI, name="deleteRI"),
+
+    path("searchWiki/", views.search, name="search"),
 ]
 
