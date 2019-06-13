@@ -15,7 +15,7 @@
             <h4>{{ wiki.updatedDated }}</h4><br>
             <img id="eachWikiMainImg" src="{{ wiki.image.url }}" alt="wiki image"><br>
 
-            {% if request.user.is_authenticated %}
+            {% if request.user == wiki.creator %}
             <a href="{% url 'WikiApp:editWiki' wiki.pk %}" class="btn btn-dark">Edit Wiki</a><br>
             <a href="{% url 'WikiApp:deleteWiki' wiki.pk %}" class="btn btn-dark">DELETE Wiki</a><br>
             <a href="{% url 'WikiApp:addRI' wiki.pk %}" class="btn btn-dark">Create Related Item</a><br>
@@ -30,7 +30,7 @@
                     <h5 class="card-title">{{ eachRI.title }}</h5>
                     <p class="card-text">{{ eachRI.text }}</p>
 
-                    {% if request.user.is_authenticated %}
+                    {% if request.user == wiki.creator %}
                     <a href="{% url 'WikiApp:editRI' wiki.pk eachRI.pk %}" class="btn btn-dark">EDIT RELATED ITEM</a>
                     <a href="{% url 'WikiApp:deleteRI' wiki.pk eachRI.pk %}" class="btn btn-dark">DELETE RELATED ITEM</a>
                     {% endif %}
