@@ -9,16 +9,16 @@
 <div class="container">
     <div class="row">
         <div class="col-8">
-            {{ wiki.title }} <br>
-            {{ wiki.text }} <br>
-            {{ wiki.createdDate }} <br>
-            {{ wiki.updatedDated }}<br>
+            <h1>{{ wiki.title }} </h1><br>
+            <h3>{{ wiki.text }} </h3><br>
+            <h4>{{ wiki.createdDate }} </h4><br>
+            <h4>{{ wiki.updatedDated }}</h4><br>
             <img id="eachWikiMainImg" src="{{ wiki.image.url }}" alt="wiki image"><br>
 
             {% if request.user.is_authenticated %}
-            <a href="{% url 'WikiApp:editWiki' wiki.pk %}">Edit Wiki</a><br>
-            <a href="{% url 'WikiApp:deleteWiki' wiki.pk %}">DELETE Wiki</a><br>
-            <a href="{% url 'WikiApp:addRI' wiki.pk %}">Create Related Item</a><br>
+            <a href="{% url 'WikiApp:editWiki' wiki.pk %}" class="btn btn-dark">Edit Wiki</a><br>
+            <a href="{% url 'WikiApp:deleteWiki' wiki.pk %}" class="btn btn-dark">DELETE Wiki</a><br>
+            <a href="{% url 'WikiApp:addRI' wiki.pk %}" class="btn btn-dark">Create Related Item</a><br>
             {% endif %}
         </div>
         <div class="col">
@@ -31,8 +31,8 @@
                     <p class="card-text">{{ eachRI.text }}</p>
 
                     {% if request.user.is_authenticated %}
-                    <a href="{% url 'WikiApp:editRI' wiki.pk eachRI.pk %}" class="btn btn-primary">EDIT RELATED ITEM</a>
-                    <a href="{% url 'WikiApp:deleteRI' wiki.pk eachRI.pk %}" class="btn btn-primary">DELETE RELATED ITEM</a>
+                    <a href="{% url 'WikiApp:editRI' wiki.pk eachRI.pk %}" class="btn btn-dark">EDIT RELATED ITEM</a>
+                    <a href="{% url 'WikiApp:deleteRI' wiki.pk eachRI.pk %}" class="btn btn-dark">DELETE RELATED ITEM</a>
                     {% endif %}
                 </div>
             </div>

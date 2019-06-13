@@ -1,10 +1,12 @@
 {% extends 'WikiApp/base.html' %}
 
 {% block content %}
+<h1 class="head">My Wiki</h1>
 {% if request.user.is_authenticated %}
 <div class="wikiContainer">
     {% if myWikis %}
     {% for eachWiki in myWikis %}
+
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{ eachWiki.image.url }}" alt="wiki image">
         <div class="card-body">
