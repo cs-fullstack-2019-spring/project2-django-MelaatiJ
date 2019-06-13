@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f5c192f-3c46-4f7f-9513-5cbe2d357ca1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WikiApp/static/WikiApp/css/wikicss.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiApp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/WikiApp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiApp/static/WikiApp/css/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiApp/templates/WikiApp/allWikis.html" beforeDir="false" afterPath="$PROJECT_DIR$/WikiApp/templates/WikiApp/allWikis.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiApp/templates/WikiApp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/WikiApp/templates/WikiApp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiApp/templates/WikiApp/deleteWiki.html" beforeDir="false" afterPath="$PROJECT_DIR$/WikiApp/templates/WikiApp/deleteWiki.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiApp/templates/WikiApp/eachWiki.html" beforeDir="false" afterPath="$PROJECT_DIR$/WikiApp/templates/WikiApp/eachWiki.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiApp/templates/WikiApp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WikiApp/templates/WikiApp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiApp/templates/WikiApp/myWiki.html" beforeDir="false" afterPath="$PROJECT_DIR$/WikiApp/templates/WikiApp/myWiki.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiApp/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/WikiApp/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WikiApp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/WikiApp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WikiProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +92,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WikiApp/templates/WikiApp/eachWiki.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="-30">
               <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -173,9 +158,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="9" />
-    <option name="y" value="319" />
-    <option name="width" value="1020" />
+    <option name="y" value="25" />
+    <option name="width" value="595" />
     <option name="height" value="616" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -253,6 +237,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.10.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../passionProject" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -292,14 +277,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="824" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Designer" order="1" />
       <window_info content_ui="combo" id="Project" order="2" weight="0.17181467" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.08345324" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.61870503" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
@@ -513,7 +497,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WikiApp/templates/WikiApp/eachWiki.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="-30">
           <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
