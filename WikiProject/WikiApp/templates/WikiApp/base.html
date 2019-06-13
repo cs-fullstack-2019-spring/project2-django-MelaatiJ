@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="{% url 'WikiApp:allWikis' %}">All Wikis <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'WikiApp:allWikis' %}">All Wikis <span class="sr-only"></span></a>
             </li>
             {% if request.user.is_authenticated %}
             <li class="nav-item">
@@ -41,7 +41,7 @@
             {% endif %}
         </ul>
         <span class="navbar-text">
-      Navbar text with an inline element
+      Explore the World, Create the World
     </span>
     </div>
 </nav>
