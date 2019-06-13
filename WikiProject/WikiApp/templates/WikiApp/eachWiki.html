@@ -1,25 +1,65 @@
 {% extends 'WikiApp/base.html' %}
 
 <!-- prints my specific wiki with the titile, text, createdate and updatedate -->
-{% block content %}
-{{ wiki.title }} <br>
-{{ wiki.text }} <br>
-{{ wiki.createdDate }} <br>
-{{ wiki.updatedDated }}<br>
-<img src="{{ wiki.image.url }}" alt="wiki image"><br>
-<a href="{% url 'WikiApp:editWiki' wiki.pk %}">Edit Wiki</a><br>
-<a href="{% url 'WikiApp:deleteWiki' wiki.pk %}">DELETE Wiki</a><br>
 
-<a href="{% url 'WikiApp:addRI' wiki.pk %}">Create Related Item</a><br>
+{% block content %}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            {{ wiki.title }} <br>
+            {{ wiki.text }} <br>
+            {{ wiki.createdDate }} <br>
+            {{ wiki.updatedDated }}<br>
+            <img src="{{ wiki.image.url }}" alt="wiki image"><br>
+
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'WikiApp:editWiki' wiki.pk %}">Edit Wiki</a><br>
+            <a href="{% url 'WikiApp:deleteWiki' wiki.pk %}">DELETE Wiki</a><br>
+            <a href="{% url 'WikiApp:addRI' wiki.pk %}">Create Related Item</a><br>
+            {% endif %}
+        </div>
+        <div class="col">
+            {% for eachRI in RIS %}
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{ eachRI.image.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ eachRI.title }}</h5>
+                    <p class="card-text">{{ eachRI.text }}</p>
+
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'WikiApp:editRI' wiki.pk eachRI.pk %}" class="btn btn-primary">EDIT RELATED ITEM</a>
+                    <a href="{% url 'WikiApp:deleteRI' wiki.pk eachRI.pk %}" class="btn btn-primary">DELETE RELATED ITEM</a>
+                    {% endif %}
+                </div>
+            </div>
+
+
+<!--            {{ eachRI.title }} <br>-->
+<!--            {{ eachRI.text }}<br>-->
+<!--            <img src="{{ eachRI.image.url }}" alt="wiki image"><br>-->
+
+<!--            {% if request.user.is_authenticated %}-->
+
+<!--&lt;!&ndash;            <a href="{% url 'WikiApp:editRI' wiki.pk eachRI.pk %}">EDIT RELATED ITEM</a><br>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a href="{% url 'WikiApp:deleteRI' wiki.pk eachRI.pk %}">DELETE RELATED ITEM</a><br>&ndash;&gt;-->
+<!--            {% endif %}-->
+            {% endfor %}
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
 
 <!-- prints for each Ri\I the title , text and image -->
-{% for eachRI in RIS %}
-{{ eachRI.title }} <br>
-{{ eachRI.text }}<br>
-<img src="{{ eachRI.image.url }}" alt="wiki image"><br>
-<a href="{% url 'WikiApp:editRI' wiki.pk eachRI.pk %}">EDIT RELATED ITEM</a><br>
-<a href="{% url 'WikiApp:deleteRI' wiki.pk eachRI.pk %}">DELETE RELATED ITEM</a><br>
-{% endfor %}
 
 
 {% endblock content %}

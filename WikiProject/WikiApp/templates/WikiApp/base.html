@@ -5,34 +5,58 @@
     <title>Title</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'WikiApp/css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'WikiApp/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'WikiApp/css/wikicss.css' %}">
     <script src="{% static 'WikiApp/js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'WikiApp/js/bootstrap.js' %}"></script>
 
 </head>
 <body>
-<div class="nav">
-    {% if request.user.is_authenticated %}
-    <a href="{% url 'WikiApp:allWikis' %}">ALL WIKIS</a>
-    <a href="{% url 'WikiApp:myWikis' %}">MY WIKIS</a>
-    <a href="{% url 'WikiApp:addWiki' %}">ADD WIKI</a>
-    <a href="{% url 'logout' %}">LOGOUT</a>
-
-    {% else %}
-    <a href="{% url 'WikiApp:allWikis' %}">ALL WIKIS</a>
-    <a href="{% url 'login' %}">LOGIN</a>
-
-    {% endif %}
-
-
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'WikiApp:index' %}">Wiki App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'WikiApp:allWikis' %}">All Wikis <span class="sr-only">(current)</span></a>
+            </li>
+            {% if request.user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'WikiApp:myWikis' %}">My Wikis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'WikiApp:addWiki' %}">Add Wiki</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'WikiApp:newUser' %}">Sign Up</a>
+            </li>
+            {% endif %}
+        </ul>
+        <span class="navbar-text">
+      Navbar text with an inline element
+    </span>
+    </div>
+</nav>
+<!--<div class="container">-->
+<!--    <img class="img-fluid" src="{% static 'WikiApp/images/kisspng-world-map-wall-decal-vector-colorful-world-map-5a81c096253b52.6722468015184528861525.jpg' %}" alt="" >-->
+<!--</div>-->
 
 {% block header %}
 <h1 class="WW">WIKI WORLD</h1>
 {% endblock header %}
 
+<div class="container">
 {% block content %}
 {% endblock content %}
+</div>
 
 {% block footer %}
 <h2 class="footer">Made by Melaati J.</h2>

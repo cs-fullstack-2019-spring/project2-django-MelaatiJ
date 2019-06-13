@@ -17,3 +17,8 @@
 .footer{
     text-align: center;
 }
+
+.containerAllWiki{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

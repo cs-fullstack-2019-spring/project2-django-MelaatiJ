@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import WikiEntryModel, RIEntryModel
-from .forms import UserForm, WikiEntryForm, RIEntryForm
+from .forms import NewUserForm, WikiEntryForm, RIEntryForm
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 from django.conf import settings
@@ -15,7 +15,7 @@ def myWikis(request):
     # if the user is logged in
     if request.user.is_authenticated:
         # get the current user with the request
-        currentUser = User.objects.get(username=request.user)
+        currentUser = request.user
         # filter objects to current user
         myWikis = WikiEntryModel.objects.filter(creator=currentUser)
         # print(myWikis[0].title)
@@ -30,16 +30,17 @@ def myWikis(request):
 
 
 def newUser(request):
-    # getting the form
-    form = UserForm(request.POST or None)
-    # if form is equal to post method
+    form = NewUserForm(request.POST or None)
+
     if request.method == "POST":
-        print(request.POST)
-        # create new user
-        User.objects.create_user(username=request.POST["username"], password=request.POST["password"])
-        return redirect("index")
+
+        username = form.cleaned_data.get("username")
+
+        User.objects.create_user(username=username, password=request.POST["password"])
+        return redirect("WikiApp:index")
     context = {
         "form": form
+
     }
     return render(request, "WikiApp/newUser.html", context)
 
@@ -59,39 +60,40 @@ def addWiki(request):
         WikiEntryModel.objects.create(title=request.POST["title"], text=request.POST['text'],
                                       createdDate=request.POST['createdDate'], updatedDate=request.POST["updatedDate"],
                                       image=request.FILES['image'], creator=currentUser)
-        return redirect("myWikis")
+        return redirect("WikiApp:myWikis")
 
     return render(request, "WikiApp/addWiki.html", context)
 
 
 def editWiki(request, pk):
-    # get wii entry with primary key
-    wiki = get_object_or_404(WikiEntryModel, pk=pk)
-    #  get form to make new wiki
-    newWiki = WikiEntryForm(request.POST or None, instance=wiki)
-    context = {
-        "newWiki": newWiki
-    }
-    # validation
-    if newWiki.is_valid():
-        # save wiki
-        newWiki.save()
-        return redirect("WikiApp:eachWiki", pk)
-    return render(request, "WikiApp/editWiki.html", context)
+    if request.user.is_authenticated:
+        wiki = get_object_or_404(WikiEntryModel, pk=pk)
+        newWiki = WikiEntryForm(request.POST or None, instance=wiki)
+        context = {
+            "newWiki": newWiki
+        }
+        # validation
+        if newWiki.is_valid():
+            # save wiki
+            newWiki.save()
+            return redirect("WikiApp:eachWiki", pk)
+        return render(request, "WikiApp/editWiki.html", context)
+
+    return redirect("WikiApp:eachWiki", pk)
+
 
 
 def deleteWiki(request, pk):
-    # get wiki entry with primary key
-    wiki = get_object_or_404(WikiEntryModel, pk=pk)
-    # if method equals post
-    if request.method == 'POST':
-        # delete
-        wiki.delete()
-        return redirect('WikiApp:myWikis')
-    context = {
-        "wiki": wiki
-    }
-    return render(request, "WikiApp/deleteWiki.html", context)
+    if request.user.is_authenticated:
+        wiki = get_object_or_404(WikiEntryModel, pk=pk)
+        if request.method == 'POST':
+            # delete
+            wiki.delete()
+            return redirect('WikiApp:myWikis')
+        context = {
+            "wiki": wiki
+        }
+        return render(request, "WikiApp/deleteWiki.html", context)
 
 
 def index(request):

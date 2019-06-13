@@ -1,8 +1,20 @@
 {% extends 'WikiApp/base.html' %}
 
+
 {% block content %}
+<div class="containerAllWiki">
 {% for eachWiki in allWikis %}
-{{ eachWiki.title }}<br>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-bottom" src="{{ eachWiki.image.url }}" alt="wiki image">
+        <div class="card-body">
+            <a class="card-text" href="{{ eachWiki.get_absolute_url }}"><h1><a href="{{ eachWiki.get_absolute_url }}">{{ eachWiki.title }} </a></h1> </a>
+        </div>
+    </div>
+
+<!--<h1>{{ eachWiki.title }}</h1><br>-->
+
+
 {% endfor %}
+</div>
 
 {% endblock content %}

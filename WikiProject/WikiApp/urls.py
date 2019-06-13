@@ -21,3 +21,4 @@ urlpatterns = [
     path("editRI/<wikipk>/<ripk>/", views.editRI, name="editRI"),
     path("deleteRI/<wikipk>/<ripk>/", views.deleteRI, name="deleteRI"),
 ]
+
