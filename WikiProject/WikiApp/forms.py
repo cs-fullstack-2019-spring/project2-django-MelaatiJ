@@ -42,7 +42,7 @@ class NewUserForm(forms.Form):
         }))
 
     def clean_username(self):
-        username = self.cleaned_data.get("username")
+        username = self.cleaned_data["username"]
         qs = User.objects.filter(username=username)
         if qs.exists():
             raise forms.ValidationError("Username is taken")

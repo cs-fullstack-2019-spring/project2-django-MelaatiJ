@@ -34,11 +34,10 @@ def newUser(request):
     form = NewUserForm(request.POST or None)
 
     if request.method == "POST":
+        if form.is_valid():
+            User.objects.create_user(username=request.POST["username"], password=request.POST["password"])
+            return redirect("WikiApp:index")
 
-        username = form.cleaned_data.get("username")
-
-        User.objects.create_user(username=username, password=request.POST["password"])
-        return redirect("WikiApp:index")
     context = {
         "form": form
 
