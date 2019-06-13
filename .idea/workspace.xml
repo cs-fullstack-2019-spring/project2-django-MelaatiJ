@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c554433-ea41-44d3-a24d-f9ff16a8733f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WikiProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WikiProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WikiProject/WikiApp/static/WikiApp/css/wikicss.css" beforeDir="false" afterPath="$PROJECT_DIR$/WikiProject/WikiApp/static/WikiApp/css/wikicss.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiProject/WikiApp/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/WikiProject/WikiApp/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiProject/WikiApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WikiProject/WikiApp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WikiProject/WikiApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/WikiProject/WikiApp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,15 +32,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/registration/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/newUser.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -65,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="165">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -80,10 +68,19 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/static/WikiApp/css/wikicss.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="450">
               <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -104,7 +101,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="330">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
@@ -163,7 +160,6 @@
         <option value="$PROJECT_DIR$/WikiProject/WikiApp/admin.py" />
         <option value="$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/addRI.html" />
         <option value="$PROJECT_DIR$/WikiProject/WikiApp/forms.py" />
-        <option value="$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/index.html" />
         <option value="$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/myWiki.html" />
         <option value="$PROJECT_DIR$/WikiProject/WikiApp/models.py" />
         <option value="$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/editRI.html" />
@@ -178,6 +174,8 @@
         <option value="$PROJECT_DIR$/WikiProject/WikiApp/views.py" />
         <option value="$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/addWiki.html" />
         <option value="$PROJECT_DIR$/WikiProject/WikiApp/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/index.html" />
+        <option value="$PROJECT_DIR$/WikiProject/WikiApp/static/WikiApp/css/wikicss.css" />
       </list>
     </option>
   </component>
@@ -204,8 +202,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,6 +226,32 @@
               <item name="WikiProject" type="462c0819:PsiDirectoryNode" />
               <item name="WikiApp" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project2-django-MelaatiJ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project2-django-MelaatiJ" type="462c0819:PsiDirectoryNode" />
+              <item name="WikiProject" type="462c0819:PsiDirectoryNode" />
+              <item name="WikiApp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="WikiApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project2-django-MelaatiJ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project2-django-MelaatiJ" type="462c0819:PsiDirectoryNode" />
+              <item name="WikiProject" type="462c0819:PsiDirectoryNode" />
+              <item name="WikiApp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="WikiApp" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project2-django-MelaatiJ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project2-django-MelaatiJ" type="462c0819:PsiDirectoryNode" />
+              <item name="WikiProject" type="462c0819:PsiDirectoryNode" />
+              <item name="WikiApp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="WikiApp" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project2-django-MelaatiJ" type="b2602c69:ProjectViewProjectNode" />
@@ -264,6 +286,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -271,7 +295,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.10.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MelaatiJ.com" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -340,7 +364,7 @@
     <frame x="0" y="25" width="1600" height="824" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49785408" visible="true" weight="0.13770914" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49785408" visible="true" weight="0.13770914" />
       <window_info id="Structure" order="1" sideWeight="0.50214595" side_tool="true" weight="0.24967825" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -356,7 +380,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5019305" side_tool="true" weight="0.40431654" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.4980695" visible="true" weight="0.26906475" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4980695" visible="true" weight="0.26906475" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -460,13 +484,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/static/WikiApp/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/static/WikiApp/css/base.css" />
     <entry file="file://$PROJECT_DIR$/WikiProject/WikiProject/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -512,55 +530,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/urls.py">
+    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/allWikis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/deleteWiki.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/addWiki.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="416">
+          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -571,6 +544,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/allWikis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -578,10 +568,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/registration/login.html">
+    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/deleteWiki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/addWiki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/templates/WikiApp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WikiProject/WikiApp/static/WikiApp/css/wikicss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
         </state>
       </provider>
     </entry>
